@@ -11786,7 +11786,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11878,7 +11878,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11889,7 +11889,7 @@ div#notebook {
 
 <span class="c1"># Explore the dataset</span>
 <span class="n">batch_id</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">sample_id</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="n">sample_id</span> <span class="o">=</span> <span class="mi">9</span>
 <span class="n">helper</span><span class="o">.</span><span class="n">display_stats</span><span class="p">(</span><span class="n">cifar10_dataset_folder_path</span><span class="p">,</span> <span class="n">batch_id</span><span class="p">,</span> <span class="n">sample_id</span><span class="p">)</span>
 </pre></div>
 
@@ -11911,58 +11911,58 @@ Samples: 10000
 Label Counts: {0: 984, 1: 1007, 2: 1010, 3: 995, 4: 1010, 5: 988, 6: 1008, 7: 1026, 8: 987, 9: 985}
 First 20 Labels: [1, 6, 6, 8, 8, 3, 4, 6, 0, 6, 0, 3, 6, 6, 5, 4, 8, 3, 2, 6]
 
-Example of Image 99:
-Image - Min Value: 2 Max Value: 236
+Example of Image 9:
+Image - Min Value: 40 Max Value: 229
 Image - Shape: (32, 32, 3)
-Label - Label Id: 8 Name: ship
-[[[178 183 199]
-  [166 171 184]
-  [160 166 179]
+Label - Label Id: 6 Name: frog
+[[[132 127 123]
+  [137 132 126]
+  [138 137 133]
   ..., 
-  [176 184 199]
-  [176 183 199]
-  [179 185 201]]
+  [125 123 116]
+  [113 113 108]
+  [121 112 104]]
 
- [[171 178 193]
-  [162 169 181]
-  [160 167 179]
+ [[136 130 116]
+  [128 129 120]
+  [141 144 130]
   ..., 
-  [169 178 191]
-  [168 176 189]
-  [177 182 197]]
+  [154 142 118]
+  [111 112  98]
+  [108 108 108]]
 
- [[169 177 192]
-  [161 169 181]
-  [162 169 181]
+ [[129 124  98]
+  [149 146 139]
+  [133 135 131]
   ..., 
-  [170 179 190]
-  [165 173 185]
-  [178 184 196]]
+  [119 109  77]
+  [134 132 113]
+  [113 116 116]]
 
  ..., 
- [[ 35  38  33]
-  [ 28  29  25]
-  [ 24  26  24]
+ [[ 76  92  83]
+  [121 129 127]
+  [125 129 136]
   ..., 
-  [158 152 142]
-  [137 135 131]
-  [ 78  80  79]]
+  [118 127 132]
+  [120 127 128]
+  [120 123 128]]
 
- [[147 148 148]
-  [146 148 145]
-  [152 154 151]
+ [[109 109  90]
+  [131 134 128]
+  [144 136 132]
   ..., 
-  [163 158 150]
-  [115 113 110]
-  [ 71  72  69]]
+  [114 124 131]
+  [126 129 129]
+  [131 131 132]]
 
- [[229 229 234]
-  [229 229 233]
-  [232 233 234]
+ [[143 125  90]
+  [149 141 128]
+  [155 140 132]
   ..., 
-  [139 135 130]
-  [ 79  77  74]
-  [ 58  58  54]]]
+  [114 121 127]
+  [118 121 127]
+  [124 123 126]]]
 </pre>
 </div>
 </div>
@@ -11983,7 +11983,7 @@ Label - Label Id: 8 Name: ship
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">preprocessing</span>
@@ -11994,7 +11994,7 @@ Label - Label Id: 8 Name: ship
 <span class="sd">    : return: Numpy array of normalize data</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">/</span><span class="mf">255.0</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -12038,7 +12038,7 @@ Label - Label Id: 8 Name: ship
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">one_hot_encode</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -12106,7 +12106,7 @@ Label - Label Id: 8 Name: ship
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12133,7 +12133,7 @@ Label - Label Id: 8 Name: ship
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12190,7 +12190,7 @@ Label - Label Id: 8 Name: ship
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -12281,7 +12281,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv2d_maxpool</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="p">,</span> <span class="n">conv_ksize</span><span class="p">,</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">):</span>
@@ -12296,7 +12296,7 @@ Keep Prob Tests Passed.
 <span class="sd">    : return: A tensor that represents convolution and max pooling of x_tensor</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">weight</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span>
-    <span class="nb">list</span><span class="p">(</span><span class="n">conv_ksize</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">x_tensor</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span><span class="o">.</span><span class="n">as_list</span><span class="p">()[</span><span class="mi">3</span><span class="p">],</span><span class="n">conv_num_outputs</span><span class="p">]</span>
+    <span class="nb">list</span><span class="p">(</span><span class="n">conv_ksize</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">x_tensor</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span><span class="o">.</span><span class="n">as_list</span><span class="p">()[</span><span class="mi">3</span><span class="p">],</span><span class="n">conv_num_outputs</span><span class="p">],</span><span class="n">stddev</span> <span class="o">=</span> <span class="mf">0.05</span>
     <span class="p">))</span>
     
     <span class="n">bias</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">conv_num_outputs</span><span class="p">))</span>
@@ -12355,7 +12355,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">):</span>
@@ -12409,7 +12409,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fully_conn</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">):</span>
@@ -12422,7 +12422,7 @@ Keep Prob Tests Passed.
 
     <span class="c1"># TODO: Implement Function</span>
     <span class="n">num_features</span> <span class="o">=</span> <span class="n">x_tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-    <span class="n">weight</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">([</span><span class="n">num_features</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">]))</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="n">num_features</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">],</span> <span class="n">stddev</span> <span class="o">=</span><span class="mf">0.01</span><span class="p">))</span>
     <span class="n">bias</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">num_outputs</span><span class="p">]))</span>
     <span class="n">fcl</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">weight</span><span class="p">),</span> <span class="n">bias</span><span class="p">)</span>
     <span class="n">fcl</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">fcl</span><span class="p">)</span>
@@ -12473,7 +12473,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">):</span>
@@ -12485,7 +12485,7 @@ Keep Prob Tests Passed.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
     <span class="n">num_features</span> <span class="o">=</span> <span class="n">x_tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
-    <span class="n">weight</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal</span><span class="p">([</span><span class="n">num_features</span><span class="p">,</span><span class="n">num_outputs</span><span class="p">]))</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="n">num_features</span><span class="p">,</span><span class="n">num_outputs</span><span class="p">],</span><span class="n">stddev</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">))</span>
     <span class="n">bias</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">num_outputs</span><span class="p">]))</span>
     <span class="n">output_layer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">weight</span><span class="p">),</span> <span class="n">bias</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">output_layer</span>
@@ -12538,7 +12538,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_net</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">):</span>
@@ -12552,12 +12552,15 @@ Keep Prob Tests Passed.
     <span class="c1">#    Play around with different number of outputs, kernel size and stride</span>
     <span class="c1"># Function Definition from Above:</span>
     <span class="c1">#    conv2d_maxpool(x_tensor, conv_num_outputs, conv_ksize, conv_strides, pool_ksize, pool_strides)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> 
-                          <span class="n">conv_ksize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> 
-                          <span class="n">conv_strides</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
-                          <span class="n">pool_ksize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> 
-                          <span class="n">pool_strides</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-        <span class="c1"># TODO: Apply a Flatten Layer</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="n">conv_ksize</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">conv_strides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">pool_ksize</span> <span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                  <span class="n">pool_strides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span> <span class="o">=</span> <span class="mi">128</span><span class="p">,</span> <span class="n">conv_ksize</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">conv_strides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">pool_ksize</span> <span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                  <span class="n">pool_strides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span> <span class="n">conv_ksize</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">conv_strides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">pool_ksize</span> <span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                  <span class="n">pool_strides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>    
+    
+
+    <span class="c1"># TODO: Apply a Flatten Layer</span>
     <span class="c1"># Function Definition from Above:</span>
     <span class="c1">#   flatten(x_tensor)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">flatten</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -12566,13 +12569,11 @@ Keep Prob Tests Passed.
     <span class="c1">#    Play around with different number of outputs</span>
     <span class="c1"># Function Definition from Above:</span>
     <span class="c1">#   fully_conn(x_tensor, num_outputs)</span>
+    
     <span class="n">x</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1024</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_prob</span> <span class="o">=</span> <span class="n">keep_prob</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">512</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_prob</span> <span class="o">=</span> <span class="n">keep_prob</span><span class="p">)</span>  
-
-
-    <span class="c1"># x = tf.nn.dropout(x, keep_prob = keep_prob)</span>
     
     <span class="c1"># TODO: Apply an Output Layer</span>
     <span class="c1">#    Set this to the number of classes</span>
@@ -12638,6 +12639,37 @@ Keep Prob Tests Passed.
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[70]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>TensorShape([Dimension(None), Dimension(32), Dimension(32), Dimension(3)])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12657,7 +12689,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_neural_network</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">keep_probability</span><span class="p">,</span> <span class="n">feature_batch</span><span class="p">,</span> <span class="n">label_batch</span><span class="p">):</span>
@@ -12712,7 +12744,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_stats</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">feature_batch</span><span class="p">,</span> <span class="n">label_batch</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">):</span>
@@ -12725,8 +12757,8 @@ Keep Prob Tests Passed.
 <span class="sd">    : accuracy: TensorFlow accuracy function</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">loss</span><span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="n">feed_dict</span> <span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">feature_batch</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">label_batch</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
-    <span class="n">validation_accuracy</span><span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">feed_dict</span> <span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">valid_features</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">valid_labels</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
+    <span class="n">loss</span><span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="n">feed_dict</span> <span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">feature_batch</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">label_batch</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">:</span><span class="mf">1.0</span><span class="p">})</span>
+    <span class="n">validation_accuracy</span> <span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">feed_dict</span> <span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">valid_features</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">valid_labels</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">:</span><span class="mf">1.0</span><span class="p">})</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loss =</span><span class="si">{0}</span><span class="s1">, Validation Accuracy = </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loss</span><span class="p">,</span> <span class="n">validation_accuracy</span><span class="p">))</span>
 </pre></div>
 
@@ -12758,13 +12790,13 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Tune Parameters</span>
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">30</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">keep_probability</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">keep_probability</span> <span class="o">=</span> <span class="mf">0.9</span>
 </pre></div>
 
 </div>
@@ -12784,7 +12816,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12817,36 +12849,36 @@ Keep Prob Tests Passed.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Checking the Training on a Single Batch...
-Epoch  1, CIFAR-10 Batch 1:  Loss =363.8694763183594, Validation Accuracy = 0.13099999725818634
-Epoch  2, CIFAR-10 Batch 1:  Loss =2.290992498397827, Validation Accuracy = 0.11079999059438705
-Epoch  3, CIFAR-10 Batch 1:  Loss =2.3107521533966064, Validation Accuracy = 0.09920000284910202
-Epoch  4, CIFAR-10 Batch 1:  Loss =2.2943131923675537, Validation Accuracy = 0.10119999945163727
-Epoch  5, CIFAR-10 Batch 1:  Loss =2.287935733795166, Validation Accuracy = 0.10619999468326569
-Epoch  6, CIFAR-10 Batch 1:  Loss =2.301154613494873, Validation Accuracy = 0.10079999268054962
-Epoch  7, CIFAR-10 Batch 1:  Loss =2.296957492828369, Validation Accuracy = 0.09999999403953552
-Epoch  8, CIFAR-10 Batch 1:  Loss =2.3177971839904785, Validation Accuracy = 0.09779998660087585
-Epoch  9, CIFAR-10 Batch 1:  Loss =2.3043570518493652, Validation Accuracy = 0.0998000055551529
-Epoch 10, CIFAR-10 Batch 1:  Loss =2.3048558235168457, Validation Accuracy = 0.10019999742507935
-Epoch 11, CIFAR-10 Batch 1:  Loss =2.3017489910125732, Validation Accuracy = 0.10019999742507935
-Epoch 12, CIFAR-10 Batch 1:  Loss =2.300773859024048, Validation Accuracy = 0.10579999536275864
-Epoch 13, CIFAR-10 Batch 1:  Loss =2.3065927028656006, Validation Accuracy = 0.10019998997449875
-Epoch 14, CIFAR-10 Batch 1:  Loss =2.3011984825134277, Validation Accuracy = 0.09999999403953552
-Epoch 15, CIFAR-10 Batch 1:  Loss =2.3005526065826416, Validation Accuracy = 0.10000000149011612
-Epoch 16, CIFAR-10 Batch 1:  Loss =2.301281452178955, Validation Accuracy = 0.10539999604225159
-Epoch 17, CIFAR-10 Batch 1:  Loss =2.302950143814087, Validation Accuracy = 0.10539999604225159
-Epoch 18, CIFAR-10 Batch 1:  Loss =2.3034873008728027, Validation Accuracy = 0.10000000149011612
-Epoch 19, CIFAR-10 Batch 1:  Loss =2.303429126739502, Validation Accuracy = 0.10000000149011612
-Epoch 20, CIFAR-10 Batch 1:  Loss =2.303497552871704, Validation Accuracy = 0.10000000149011612
-Epoch 21, CIFAR-10 Batch 1:  Loss =2.3034818172454834, Validation Accuracy = 0.10000000149011612
-Epoch 22, CIFAR-10 Batch 1:  Loss =2.3002214431762695, Validation Accuracy = 0.10519999265670776
-Epoch 23, CIFAR-10 Batch 1:  Loss =2.2989869117736816, Validation Accuracy = 0.10539999604225159
-Epoch 24, CIFAR-10 Batch 1:  Loss =2.3022894859313965, Validation Accuracy = 0.10539999604225159
-Epoch 25, CIFAR-10 Batch 1:  Loss =2.3030683994293213, Validation Accuracy = 0.10539999604225159
-Epoch 26, CIFAR-10 Batch 1:  Loss =2.3009564876556396, Validation Accuracy = 0.10040000081062317
-Epoch 27, CIFAR-10 Batch 1:  Loss =2.3006324768066406, Validation Accuracy = 0.10579999536275864
-Epoch 28, CIFAR-10 Batch 1:  Loss =2.30259370803833, Validation Accuracy = 0.10579999536275864
-Epoch 29, CIFAR-10 Batch 1:  Loss =2.3031275272369385, Validation Accuracy = 0.10579999536275864
-Epoch 30, CIFAR-10 Batch 1:  Loss =2.303269147872925, Validation Accuracy = 0.10040000081062317
+Epoch  1, CIFAR-10 Batch 1:  Loss =2.3034794330596924, Validation Accuracy = 0.0997999906539917
+Epoch  2, CIFAR-10 Batch 1:  Loss =2.303434371948242, Validation Accuracy = 0.0997999906539917
+Epoch  3, CIFAR-10 Batch 1:  Loss =2.303412914276123, Validation Accuracy = 0.0997999906539917
+Epoch  4, CIFAR-10 Batch 1:  Loss =2.3034069538116455, Validation Accuracy = 0.0997999906539917
+Epoch  5, CIFAR-10 Batch 1:  Loss =2.303405284881592, Validation Accuracy = 0.0997999906539917
+Epoch  6, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch  7, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch  8, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch  9, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 10, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 11, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 12, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 13, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 14, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 15, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 16, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 17, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 18, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 19, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 20, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 21, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999981045723
+Epoch 22, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 23, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 24, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 25, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 26, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 27, CIFAR-10 Batch 1:  Loss =2.3034045696258545, Validation Accuracy = 0.0997999906539917
+Epoch 28, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 29, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
+Epoch 30, CIFAR-10 Batch 1:  Loss =2.3034048080444336, Validation Accuracy = 0.0997999906539917
 </pre>
 </div>
 </div>
@@ -12896,41 +12928,6 @@ Epoch 30, CIFAR-10 Batch 1:  Loss =2.303269147872925, Validation Accuracy = 0.10
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Training...
-Epoch  1, CIFAR-10 Batch 1:  Loss =4270.869140625, Validation Accuracy = 0.2955999970436096
-Epoch  1, CIFAR-10 Batch 2:  Loss =1636.7266845703125, Validation Accuracy = 0.25679999589920044
-Epoch  1, CIFAR-10 Batch 3:  Loss =228.2237548828125, Validation Accuracy = 0.22859998047351837
-Epoch  1, CIFAR-10 Batch 4:  Loss =32.28511428833008, Validation Accuracy = 0.11679999530315399
-Epoch  1, CIFAR-10 Batch 5:  Loss =2.394688129425049, Validation Accuracy = 0.09479999542236328
-Epoch  2, CIFAR-10 Batch 1:  Loss =2.3295602798461914, Validation Accuracy = 0.09759999811649323
-Epoch  2, CIFAR-10 Batch 2:  Loss =2.2988457679748535, Validation Accuracy = 0.09499999135732651
-Epoch  2, CIFAR-10 Batch 3:  Loss =2.2780799865722656, Validation Accuracy = 0.09440000355243683
-Epoch  2, CIFAR-10 Batch 4:  Loss =2.2984418869018555, Validation Accuracy = 0.09440000355243683
-Epoch  2, CIFAR-10 Batch 5:  Loss =2.3071038722991943, Validation Accuracy = 0.09440000355243683
-Epoch  3, CIFAR-10 Batch 1:  Loss =2.3059282302856445, Validation Accuracy = 0.10499999672174454
-Epoch  3, CIFAR-10 Batch 2:  Loss =2.30239200592041, Validation Accuracy = 0.0997999981045723
-Epoch  3, CIFAR-10 Batch 3:  Loss =2.2825589179992676, Validation Accuracy = 0.094200000166893
-Epoch  3, CIFAR-10 Batch 4:  Loss =2.3006374835968018, Validation Accuracy = 0.094200000166893
-Epoch  3, CIFAR-10 Batch 5:  Loss =2.3063578605651855, Validation Accuracy = 0.094200000166893
-Epoch  4, CIFAR-10 Batch 1:  Loss =2.3054394721984863, Validation Accuracy = 0.10499998927116394
-Epoch  4, CIFAR-10 Batch 2:  Loss =2.3010666370391846, Validation Accuracy = 0.09959999471902847
-Epoch  4, CIFAR-10 Batch 3:  Loss =2.283029079437256, Validation Accuracy = 0.094200000166893
-Epoch  4, CIFAR-10 Batch 4:  Loss =2.3003878593444824, Validation Accuracy = 0.094200000166893
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
